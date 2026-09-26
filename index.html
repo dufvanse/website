@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="dufvan-icon.png" />
+<title>Dufvan Ekonomi och Finans AB — Interim Ekonomichef &amp; CFO</title>
+<style>
+  :root {
+    --ink: #0f172a; --ink-soft: #475569; --accent: #0e7490; --accent-dark: #155e75;
+    --line: #e2e8f0; --bg: #ffffff; --bg-soft: #f8fafc; --card: #ffffff;
+    --brand-ink: #2d1e12;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 4.5rem 0; }
+  h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1.75rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Logotype: user-provided dufvan-logo-3.png / dufvan-icon.png, used exactly as-is */
+  .logo-img { display: block; width: 100%; height: auto; }
+  .nav-logo { display: block; height: 34px; width: auto; }
+
+  .nav { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1.5rem; max-width: 960px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 0.65rem; color: var(--ink); }
+  .brand-name { font-weight: 700; }
+  .brand-name span { color: var(--accent); }
+  .nav nav { display: flex; align-items: center; gap: 1rem; }
+  .nav nav a { color: var(--ink-soft); font-size: 0.95rem; }
+  .nav nav a:hover { color: var(--accent); text-decoration: none; }
+  .nav-controls { display: flex; gap: 0.4rem; margin-left: 0.5rem; }
+  .icon-btn { background: none; border: 1px solid var(--line); color: var(--ink-soft); border-radius: 0.5rem; padding: 0.35rem 0.6rem; font-size: 0.9rem; cursor: pointer; line-height: 1; }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero { padding: 4.5rem 0; }
+  .hero-logo-wrap { max-width: 420px; margin: 0 auto 2rem; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--accent); font-weight: 600; text-align: center; }
+  .lede { max-width: 42rem; font-size: 1.15rem; color: var(--ink-soft); margin: 1rem auto 0; text-align: center; }
+  .cta { margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+  .btn { display: inline-block; padding: 0.65rem 1.4rem; border-radius: 0.5rem; background: var(--accent); color: var(--bg); font-weight: 600; font-size: 0.95rem; border: 1px solid var(--accent); }
+  .btn:hover { background: var(--accent-dark); text-decoration: none; }
+  .btn-outline { background: transparent; color: var(--accent); }
+  .btn-outline:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+
+  .soft { background: var(--bg-soft); }
+  .grid { display: grid; gap: 1.25rem; }
+  @media (min-width: 720px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1.5rem; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .card p { color: var(--ink-soft); font-size: 0.95rem; }
+
+  .section-note { color: var(--ink-soft); max-width: 44rem; margin-bottom: 1.5rem; }
+  .bullets { list-style: none; margin-bottom: 2.5rem; display: grid; gap: 0.75rem; }
+  @media (min-width: 720px) { .bullets { grid-template-columns: 1fr 1fr; } }
+  .bullets li { color: var(--ink-soft); font-size: 0.98rem; padding-left: 1.4rem; position: relative; }
+  .bullets li::before { content: ""; position: absolute; left: 0.15rem; top: 0.55rem; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--accent); }
+
+  .timeline { list-style: none; border-left: 2px solid var(--line); margin-left: 0.4rem; }
+  .timeline li { display: flex; gap: 1.5rem; padding: 0 0 1.75rem 1.5rem; position: relative; }
+  .timeline li::before { content: ""; position: absolute; left: -0.34rem; top: 0.45rem; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--accent); }
+  .period { min-width: 7.5rem; color: var(--accent); font-weight: 600; font-size: 0.9rem; padding-top: 0.05rem; }
+  .timeline h3 { font-size: 1.02rem; }
+  .company { color: var(--ink-soft); font-size: 0.92rem; }
+
+  .contact { text-align: center; }
+  .contact-logo { max-width: 300px; margin: 0 auto 1.5rem; }
+  .contact p { color: var(--ink-soft); }
+  .contact-links { margin: 1.5rem 0; font-size: 1.1rem; line-height: 2; }
+  .contact-links a { color: var(--accent); font-weight: 600; }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0; text-align: center; }
+  .footer-name { font-size: 0.9rem; color: var(--ink-soft); }
+  .footer-name strong { color: var(--ink); font-weight: 600; }
+  .footer-meta { font-size: 0.8rem; color: var(--ink-soft); opacity: 0.7; margin-top: 0.35rem; }
+
+  [data-en] { display: initial; }
+  html[lang="sv"] [data-en]:not(:empty) { display: none; }
+  html[lang="en"] [data-sv] { display: none; }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img class="nav-logo" src="dufvan-logo-3.png" alt="Dufvan Ekonomi och Finans AB" />
+      <span class="brand-name">Dufvan<span> Ekonomi &amp; Finans</span></span>
+    </a>
+    <nav>
+      <a href="#tjanster" data-sv>Tjänster</a><a href="#tjanster" data-en>Services</a>
+      <a href="#erfarenhet" data-sv>Erfarenhet</a><a href="#erfarenhet" data-en>Experience</a>
+      <a href="#kontakt" data-sv>Kontakt</a><a href="#kontakt" data-en>Contact</a>
+      <span class="nav-controls">
+        <button class="icon-btn" id="langBtn" aria-label="Language">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="container">
+    <div class="hero-logo-wrap">
+      <img class="logo-img" src="dufvan-logo-3.png" alt="Dufvan Ekonomi och Finans AB" />
+    </div>
+    <p class="eyebrow" data-sv>Interim Ekonomichef &middot; CFO &middot; Finance Controller</p>
+    <p class="eyebrow" data-en>Interim CFO &middot; Head of Finance &middot; Finance Controller</p>
+    <p class="lede" data-sv> Är ert företag eller avdelning i behov av Interim CFO, Finance Controller, Redovisningsekonom, -chef eller tillfälligt stöd inom ekonomifunktionen? Med kundens behov i centrum — lösningsorienterad, strukturerad och van att verka i dynamiska och internationella miljöer.</p>
+    <p class="lede" data-en>Is your company or department in need of an Interim CFO, Finance Controller, Accountant, Head of Accountancy or temporary support within the finance function? With the client's needs at the center — solution-oriented, structured and used to working in dynamic and international environments.</p>
+    <div class="cta">
+      <a class="btn" href="#kontakt" data-sv>Kontakta mig</a>
+      <a class="btn" href="#kontakt" data-en>Contact me</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/mattias-persson-583b0b25" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="tjanster" class="soft">
+  <div class="container">
+    <h2 data-sv>Tjänster</h2>
+    <h2 data-en>Services</h2>
+    <div class="grid">
+      <article class="card">
+        <h3 data-sv>Interim Ekonomichef / CFO</h3><h3 data-en>Interim CFO / Head of Finance</h3>
+        <p data-sv>Tillförlitlig finansledning på uppdrag — från strategi till daglig styrning — när organisationen behöver det som mest.</p>
+        <p data-en>Reliable finance leadership on assignment — from strategy to daily management — when your organisation needs it most.</p>
+      </article>
+      <article class="card">
+        <h3>Finance Controller</h3>
+        <p data-sv>Robust ekonomisk rapportering, prognoser och interna kontroller som ger ledningen rätt underlag i tid.</p>
+        <p data-en>Robust financial reporting, forecasting and internal controls that give management the right basis on time.</p>
+      </article>
+      <article class="card">
+        <h3 data-sv>Redovisning &amp; konsultrådgivning</h3><h3 data-en>Accounting &amp; advisory</h3>
+        <p data-sv>Praktiskt och strukturerat stöd inom redovisning, administration och finansiella processer.</p>
+        <p data-en>Practical, structured support in accounting, administration and financial processes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="erfarenhet">
+  <div class="container">
+    <h2 data-sv>Erfarenhet</h2>
+    <h2 data-en>Experience</h2>
+    <p class="section-note" data-sv>Över 20 års erfarenhet av ekonomisk ledning och styrning i svenska och danska bolag — från tillverkning och livsmedel till hospitality och tech.</p>
+    <p class="section-note" data-en>Over 20 years of financial leadership and control in Swedish and Danish companies — from manufacturing and dairy to hospitality and tech.</p>
+    <ul class="bullets">
+      <li data-sv>Alltid kundens behov i centrum; lösningsorienterad och flexibel</li>
+      <li data-en>The client's needs always at the centre; solution-oriented and flexible</li>
+      <li data-sv>Självgående processlösare med ansvarsfullt förhållningssätt</li>
+      <li data-en>Self-driven problem solver with a responsible and accountable approach</li>
+      <li data-sv>Strukturerad och målinriktad; trivs i dynamisk och föränderlig miljö</li>
+      <li data-en>Structured and goal-oriented; thrives in dynamic, ever-changing environments</li>
+      <li data-sv>Mycket god kommunikatör som engagerat skapar kontaktytor både externt och internt på alla organisationens nivåer</li>
+      <li data-en>Excellent communicator who proactively builds relationships externally and internally at all levels of the organisation</li>
+    </ul>
+    <ol class="timeline">
+      <li><div class="period">2026 –</div><div><h3>Interim Ekonomichef</h3><p class="company">Playbox of Sweden · Älmhult</p></div></li>
+      <li><div class="period">2022 –</div><div><h3 data-sv>Ägare / Ekonomikonsult</h3><h3 data-en>Owner / Finance Consultant</h3><p class="company">Dufvan Ekonomi och Finans AB · Skåne</p></div></li>
+      <li><div class="period">2024 – 2026</div><div><h3>Interim Finance Controller</h3><p class="company">Alfdex AB · Landskrona</p></div></li>
+      <li><div class="period">2022 – 2024</div><div><h3>Interim Finance Controller</h3><p class="company">Elcowire Group · Helsingborg</p></div></li>
+      <li><div class="period">2021 – 2022</div><div><h3>Ekonomichef</h3><p class="company">Ligula Hospitality Group · Köpenhamn</p></div></li>
+      <li><div class="period">2017 – 2021</div><div><h3>Principal CFO</h3><p class="company">Energy Machines™ · Köpenhamn</p></div></li>
+      <li><div class="period">2016 – 2017</div><div><h3>Accounting Manager</h3><p class="company">Skånemejerier · Malmö</p></div></li>
+      <li><div class="period">2014 – 2016</div><div><h3>Accounting Manager</h3><p class="company">Lactalis Sverige · Skævinge</p></div></li>
+      <li><div class="period">2012 – 2014</div><div><h3>Ekonomikonsult</h3><p class="company">Dfind Finance · Malmö</p></div></li>
+      <li><div class="period">2012 – 2013</div><div><h3>Risk Controller</h3><p class="company">Mercedes-Benz Sverige / Danmark · Malmö</p></div></li>
+      <li><div class="period">2010 – 2012</div><div><h3>Finance Manager</h3><p class="company">Mynthuset AB/A/S · Köpenhamn</p></div></li>
+      <li><div class="period">2007 – 2010</div><div><h3>Accountant</h3><p class="company">Let's go Affärsadministration · Limhamn</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="kontakt" class="soft">
+  <div class="container contact">
+    <div class="contact-logo">
+      <img class="logo-img" src="dufvan-logo-3.png" alt="Dufvan Ekonomi och Finans AB" />
+    </div>
+    <h2 data-sv>Kontakt</h2>
+    <h2 data-en>Contact</h2>
+    <p data-sv>Är ert företag eller avdelning intresserad i behov av interim-CFO, Finance Controller, Redovisningsekonom -chef eller stöd inom ekonomifunktionen?</p>
+    <p data-en>Is your company or department interested in needing interim CFO, Finance Controller, Accounting manager services or support for your finance function?</p>
+    <p class="contact-links"><a href="mailto:mattias@dufvan.se">	mattias@dufvan.se</a><br /><a href="https://www.linkedin.com/in/mattias-persson-583b0b25" target="_blank" rel="noopener">LinkedIn: Mattias Persson ↗</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="footer-name" data-sv><strong>Mattias Persson</strong> — Interim Ekonomichef &amp; CFO, Dufvan Ekonomi och Finans AB</p>
+    <p class="footer-name" data-en><strong>Mattias Persson</strong> — Interim CFO &amp; Head of Finance, Dufvan Ekonomi och Finans AB</p>
+    <p class="footer-meta">Skåne, Sverige &middot; dufvan.se &middot; Org.nr 559204-9828</p>
+  </div>
+</footer>
+
+<script>
+  const html = document.documentElement;
+  const langBtn = document.getElementById("langBtn");
+  const applyLang = (lang) => {
+    html.lang = lang;
+    langBtn.textContent = lang === "sv" ? "EN" : "SV";
+  };
+  applyLang(localStorage.getItem("lang") || "sv");
+  langBtn.addEventListener("click", () => {
+    const lang = html.lang === "sv" ? "en" : "sv";
+    localStorage.setItem("lang", lang);
+    applyLang(lang);
+  });
+</script>
+</body>
+</html>
